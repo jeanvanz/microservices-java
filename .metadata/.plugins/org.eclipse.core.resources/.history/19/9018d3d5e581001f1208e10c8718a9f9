@@ -1,7 +1,0 @@
-package br.edu.atitus.paradigma.cambio_service.repositories;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-
-public interface CambioRepository extends JpaRepository<CambioRepository, Integer>{
-
-}

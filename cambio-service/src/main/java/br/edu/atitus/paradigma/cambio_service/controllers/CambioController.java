@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import br.edu.atitus.paradigma.cambio_service.clients.CotacaoBCBClient;
+import br.edu.atitus.paradigma.cambio_service.clients.ListaCotacaoResponse;
 import br.edu.atitus.paradigma.cambio_service.entities.CambioEntity;
 import br.edu.atitus.paradigma.cambio_service.repositories.CambioRepository;
 
@@ -17,10 +19,13 @@ import br.edu.atitus.paradigma.cambio_service.repositories.CambioRepository;
 public class CambioController {
 	
 	private final CambioRepository cambioRepository;
+	
+	private final CotacaoBCBClient cotacaoBCB;
 
-	public CambioController(CambioRepository cambioRepository) {
+	public CambioController(CambioRepository cambioRepository, CotacaoBCBClient cotacaoBCB) {
 		super();
 		this.cambioRepository = cambioRepository;
+		this.cotacaoBCB = cotacaoBCB;
 	}
 	
 	@Value("${server.port}")
@@ -34,6 +39,10 @@ public class CambioController {
 		
 		CambioEntity cambio = cambioRepository.findByOrigemAndDestino(origem, destino)
 				.orElseThrow(() -> new Exception("Câmbio não encontrado para esta origem e destino"));
+		
+		ListaCotacaoResponse cotacao = cotacaoBCB.getCotacao("USD", "10-10-2024");
+		
+		cambio.setFator(cotacao.getValue().get(0).getCotacaoVenda());
 		
 		cambio.setValorConvertido(valor * cambio.getFator());
 		cambio.setAmbiente("Cambio-Service run in port: " + porta);

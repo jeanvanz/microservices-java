@@ -40,8 +40,8 @@
 		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
 	</section>
 	<section name="NewClassCreationWizard.dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="139"/>
-		<item key="DIALOG_Y_ORIGIN" value="9"/>
+		<item key="DIALOG_X_ORIGIN" value="513"/>
+		<item key="DIALOG_Y_ORIGIN" value="106"/>
 		<item key="DIALOG_WIDTH" value="700"/>
 		<item key="DIALOG_HEIGHT" value="783"/>
 		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
@@ -54,8 +54,8 @@
 		<item key="create_unimplemented" value="true"/>
 	</section>
 	<section name="NewInterfaceCreationWizard.dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="134"/>
-		<item key="DIALOG_Y_ORIGIN" value="84"/>
+		<item key="DIALOG_X_ORIGIN" value="509"/>
+		<item key="DIALOG_Y_ORIGIN" value="182"/>
 		<item key="DIALOG_WIDTH" value="710"/>
 		<item key="DIALOG_HEIGHT" value="661"/>
 		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
