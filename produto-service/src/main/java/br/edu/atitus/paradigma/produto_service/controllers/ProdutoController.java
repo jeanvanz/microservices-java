@@ -20,7 +20,8 @@ public class ProdutoController {
 	private final ProdutoRepository repository;
 	private final CambioClient cambioClient;
 	
-	public ProdutoController(ProdutoRepository repository, CambioClient cambioClient) {
+	public ProdutoController(ProdutoRepository repository,
+			CambioClient cambioClient) {
 		super();
 		this.repository = repository;
 		this.cambioClient = cambioClient;
@@ -41,7 +42,8 @@ public class ProdutoController {
 				produto.getValor(), "USD", moeda);
 		
 		produto.setValorConvertido(cambio.getValorConvertido());
-		produto.setAmbiente("Produto-service run in: " + porta + " - " + cambio.getAmbiente());
+		produto.setAmbiente("Produto-service run in: " + porta 
+				+ " - " + cambio.getAmbiente());
 		return ResponseEntity.ok(produto);
 	}
 	

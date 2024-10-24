@@ -14,7 +14,6 @@
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
     <fullyQualifiedTypeName name="br.edu.atitus.paradigma.cambio_service.repositories.CambioRepository"/>
     <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Value"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
     <fullyQualifiedTypeName name="org.springframework.http.ResponseEntity"/>
     <fullyQualifiedTypeName name="jakarta.persistence.Transient"/>
     <fullyQualifiedTypeName name="java.util.Optional"/>
@@ -33,4 +32,5 @@
     <fullyQualifiedTypeName name="br.edu.atitus.paradigma.cambio_service.clients.CotacaoBCBClient"/>
     <fullyQualifiedTypeName name="br.edu.atitus.paradigma.cambio_service.clients.ListaCotacaoResponse"/>
     <fullyQualifiedTypeName name="org.springframework.cloud.openfeign.EnableFeignClients"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
 </qualifiedTypeNameHistroy>
