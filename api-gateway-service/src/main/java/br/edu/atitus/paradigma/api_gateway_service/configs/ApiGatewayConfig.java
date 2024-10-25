@@ -14,16 +14,25 @@ public class ApiGatewayConfig {
 			.route(rota -> rota
 					.path("/get")
 					.filters(f -> f
-							.addRequestHeader("Usuario", "Fulano")
+							.addRequestHeader("Usuario", "Jean Folle Vanz")
 							.addRequestParameter("Parametro", "Valor Parametro")
 							.addResponseHeader("Servidor", "meuServer"))
 					.uri("http://httpbin.org"))
 			.route(rota -> rota
 					.path("/cambio-service/**")
+					.filters(f -> f
+							.addRequestHeader("Usuario", "Jean Folle Vanz"))
 					.uri("lb://cambio-service"))
 			.route(rota -> rota
 					.path("/produto-service/**")
+					.filters(f -> f
+							.addRequestHeader("Usuario", "Jean Folle Vanz"))
 					.uri("lb://produto-service"))
+			.route(rota -> rota
+					.path("/saudacao-service/**")
+					.filters(f -> f
+							.addRequestHeader("Usuario", "Jean Folle Vanz"))
+					.uri("lb://saudacao-service"))
 			.build();
 	}
 
